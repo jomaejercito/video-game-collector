@@ -1,3 +1,17 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'welcome#home'
+
+  get '/login' => 'session#new'
+  post '/sessions' => 'session#create'
+  delete '/logout' => 'session#destroy'
+  get '/signup' => 'users#new'
+
+  resources :users, only: [:create, :show] do
+    resources :collections, except: [:index, :new, :edit]
+  end
+
+  resources :consoles do
+    resources :games, except: :destroy
+  end
+
 end
