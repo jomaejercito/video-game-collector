@@ -1,0 +1,12 @@
+<header>
+<% if !logged_in? %>
+  <%= link_to("Log In", login_path) %>
+  <%= link_to("Sign Up", signup_path) %>
+<% else %>
+  <%= link_to("My Collection", user_collections_path(current_user)) %>
+  <%= link_to("Consoles", consoles_path) %>
+  <%= link_to("Games", games_path) %>
+  <%= link_to("Users", users_path) %>
+  <%= link_to("Log Out", logout_path) %>
+<% end %>
+</header>

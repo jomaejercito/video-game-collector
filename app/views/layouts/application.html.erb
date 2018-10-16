@@ -11,10 +11,9 @@
 
   <body>
 
-    <%= link_to "Sign Up", signup_path, class: "navbar-brand" %>
-    <%= link_to "Log In", login_path, class: "navbar-brand" %>
-    <%= link_to "Consoles", consoles_path, class: "navbar-brand" %>
-    <%= link_to "Games", games_path, class: "navbar-brand" %>
+    <div class="navbar">
+      <%= render '/layouts/header' %>
+    </div>
 
     <%= yield %>
 
