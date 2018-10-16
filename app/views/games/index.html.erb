@@ -1,1 +1,6 @@
 <h1>Games Index</h1>
+
+<% @game.each do |game| %>
+    <h3><%= link_to game.title, game_path(game) %></h3>
+  </div>
+<% end %>

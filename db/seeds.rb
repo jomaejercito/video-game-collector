@@ -26,7 +26,7 @@ def make_consoles_and_games
   ps4.games.create(title: "Horizon Zero Dawn", genre: "Action RPG", description: "Players take control of Aloy, a hunter who ventures through a post-apocalyptic land ruled by robotic creatures.")
   ps4.games.create(title: "Until Dawn", genre: "Horror", description: "Set in Western Canada, Until Dawn centres around a group of eight teenagers who decide to have a holiday for a night in a cabin on the fictional Blackwood Mountain, exactly one year after the disappearance of two girls, the twin sisters of a member of their group.")
   ps4.games.create(title: "Marvel's Spider-Man", genre: "Action-adventure", description: "Spider-Man is an action-adventure game set in an open world modern-day New York City and played from a third-person perspective. It features combat systems such as aerial combat, Spider Sense reflexes, web-shooting, and finishing moves.")
-  ps4.games.create(title: "Uncharted 4: A Theif's End", genre: "Action-adventure", description: "Years before the events of Uncharted: Drake's Fortune, brothers Nate and Sam Drake hunt for the treasure of infamous pirate Henry Avery, who plundered $400 million during the 1695 Gunsway heist.")
+  ps4.games.create(title: "Uncharted 4: A Thief's End", genre: "Action-adventure", description: "Years before the events of Uncharted: Drake's Fortune, brothers Nate and Sam Drake hunt for the treasure of infamous pirate Henry Avery, who plundered $400 million during the 1695 Gunsway heist.")
 
   xboxone = Console.create(name: "Xbox One")
   xboxone.games.create(title: "Forza Horizon 4", genre: "Racing", description: "Forza Horizon 4 is a racing video game set in an open world environment based in a fictional representation of United Kingdom and features over 450 licensed cars.")
