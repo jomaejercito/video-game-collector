@@ -4,12 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if !!user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to user_collections_path(user)
+    @user = User.find_by(email: params[:user][:email])
+    if params[:user][:email].empty? || params[:user][:password].empty?
+      redirect_to login_path
+    elsif @user && @user.try(:authenticate, params[:user][:password])
+      session[:user_id] = @user.id
+      redirect_to user_collections_path(@user)
     else
-      render :new
+      redirect_to login_path
     end
   end
 
