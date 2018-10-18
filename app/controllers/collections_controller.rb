@@ -10,6 +10,7 @@ class CollectionsController < ApplicationController
   end
 
   def create
+    binding.pry
   end
 
   def edit

@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   end
 
   resources :games, except: :destroy
+  post '/users/:user_id/collections/:id' => 'collections#create', as: 'addtocollection'
 
 end
